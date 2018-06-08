@@ -1,0 +1,60 @@
+// Grand Parent
+
+import React, { Component } from 'react';
+import './App.css';
+import Parent from './components/parentToChild/parent';
+
+class App extends Component {
+  state = {
+    title:'placeholder title'
+  }
+
+  changeTheWorld = (newTitle) => {
+      this.setState({title:newTitle});
+  }
+
+  render() {
+    return (
+      <div className="App">
+         <Parent changeTheWorldEvent={this.changeTheWorld.bind(this, 'new world')} 
+         keepTheWorldSameEvent={this.changeTheWorld.bind(this, 'same world')}
+         title={this.state.title}/>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+// Parent 
+
+import React from 'react';
+import Child from './child';
+//sibling communication
+const parent = (props) => {
+    return(
+        <div>
+            <Child doWhatever={props.changeTheWorldEvent} title={props.title}/>
+            <Child doWhatever={props.keepTheWorldSameEvent} title={props.title}/>
+         </div>
+    )
+}
+
+export default parent;
+
+
+
+// Child
+
+import React from 'react';
+
+const child = (props) => {
+    return (
+        <div>
+            <button onClick={props.doWhatever}>{props.title}</button>
+        </div>
+    )
+}
+
+export default child;
