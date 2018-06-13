@@ -1,0 +1,12 @@
+Computed values
+
+function objectify (key, value) {
+    return {
+    [key] : value 
+	}
+}
+
+objectify('name', 'tom')
+
+//
+{ name: "tom" }
