@@ -1,0 +1,28 @@
+ Map Array of objects
+ 
+ 
+const posts = [
+  {
+    "code": "BAcyDyQwcXX",
+    "caption": "Lunch #hamont",
+    "likes": 56,
+    "id": "1161022966406956503",
+    "display_src": "https://instagram.fybz1-1.fna.fbcdn.net/vp/416792ba6300dbba7ce76104a2d6dd9a/5B5689D1/t51.2885-15/e35/12552326_495932673919321_1443393332_n.jpg",
+  },
+  {
+    "code": "BAcJeJrQca9",
+    "caption": "Snow! ⛄️🌨❄️ #lifewithsnickers",
+    "likes": 59,
+    "id": "1160844458347054781",
+    "display_src": "https://instagram.fybz1-1.fna.fbcdn.net/vp/1fdd8036047066a663bc618ce4c237a7/5B72F15C/t51.2885-15/e35/12407344_1283694208323785_735653395_n.jpg",
+  }
+]
+
+ const result = posts.map((post, i) => {
+  return {
+    allPost: post,
+    index: i
+  }
+})
+
+console.log(result)
