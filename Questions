@@ -6,3 +6,7 @@ Also, undefined and null are two distinct types: undefined is a type itself (und
 
 Unassigned variables are initialized by JavaScript with a default value of undefined. 
 JavaScript never sets a value to null. That must be done programmatically.
+
+
+- What’s the difference between Unit Testing, TDD and BDD?
+https://codeutopia.net/blog/2015/03/01/unit-testing-tdd-and-bdd/
